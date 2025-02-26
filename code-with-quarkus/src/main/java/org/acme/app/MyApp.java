@@ -1,6 +1,5 @@
 package org.acme.app;
 
-import com.sun.tools.javac.Main;
 import io.quarkus.logging.Log;
 import io.quarkus.runtime.QuarkusApplication;
 import java.util.Scanner;
@@ -22,13 +21,14 @@ public class MyApp implements QuarkusApplication {
     }
 
     public String animeTitle() {
-        Scanner myObj = new Scanner(System.in);
-        String title = myObj.nextLine();
-        if (title == "") {
-            return title();
-        }
-        else {
-            return title(title, 3);
+        try (Scanner myObj = new Scanner(System.in)) {
+            String title = myObj.nextLine();
+            if (title == "") {
+                return title();
+            }
+            else {
+                return title(title, 3);
+            }
         }
     }
 }

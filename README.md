@@ -2,11 +2,11 @@
 back runs on localhost:8080
 front runs on localhost:5173
 
-# Back
+# Run back
 cd code-with-quarkus
-./gradlew build
+./gradlew quarkusdev
 
-#front 
+# Run front 
 cd front
 cd frontend-react
-npm run
+npm run dev

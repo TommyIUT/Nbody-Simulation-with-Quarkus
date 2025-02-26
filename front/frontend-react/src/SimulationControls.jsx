@@ -9,14 +9,17 @@ export default function SimulationControls() {
 
   const addRandomBody = async () => {
     setLoadingBody(true);
+    const minMasse = 50;  // Masse minimale pour éviter les valeurs trop faibles
+    const maxMasse = 500; // Masse maximale pour éviter les déséquilibres
+
     const body = {
       x: Math.random() * 100,
       y: Math.random() * 100,
       vx: 0,
       vy: 0,
-      masse: Math.pow(Math.random(), 2) * 500 + 10, 
-
+      masse: minMasse + (maxMasse - minMasse) * Math.pow(Math.random(), 2),
     };
+
 
     try {
       await axios.post(`${API_URL}/add`, body);

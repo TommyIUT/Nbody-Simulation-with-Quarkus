@@ -19,7 +19,7 @@ function App() {
     };
   
     fetchCorpsCelestes();
-    const interval = setInterval(fetchCorpsCelestes, 5); // Mise à jour toutes les 5ms
+    const interval = setInterval(fetchCorpsCelestes, 33); // Mise à jour toutes les 33ms
   
     return () => clearInterval(interval);
   }, []);

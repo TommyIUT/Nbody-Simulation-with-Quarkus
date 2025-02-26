@@ -39,7 +39,7 @@ public class SimulationResource {
                     .entity("Ajoutez d'abord des corps célestes")
                     .build();
         }
-        simulationService.startSimulation(corps, 0.05);
+        simulationService.startSimulation(corps);
         return Response.ok("Simulation démarrée en continu").build();
     }
 
