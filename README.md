@@ -9,4 +9,6 @@ cd code-with-quarkus
 # Run front 
 cd front
 cd frontend-react
+npm i
+npm i axios
 npm run dev

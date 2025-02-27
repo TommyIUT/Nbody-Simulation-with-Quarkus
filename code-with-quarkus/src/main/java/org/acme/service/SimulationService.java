@@ -14,8 +14,8 @@ import java.util.concurrent.TimeUnit;
 
 @ApplicationScoped
 public class SimulationService {
-    private static final double G = 6.67430e-111  ;
-    private static final double DT = 0.000001;
+    private static final double G = 6.67430e-7  ;
+    private static final double DT = 10;
     private static final double MIN_DISTANCE = 0.0001;
 
     private final AtomicBoolean running = new AtomicBoolean(false);
